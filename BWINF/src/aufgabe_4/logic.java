@@ -1,3 +1,33 @@
+/*
+Notizen:
+
+	Momentum ist wichtig für die bälle die angestoßen werden, nach jedem tick soll geprüft wreden 
+	ob ein ball momentum in eine richtung hat und dann in die richtung moven. Wenn dort ein ball 
+	ist soll das momentum übertragen werden bis kein ball momentum hat.
+	
+
+	Es wäre DOCH besser wenn man alle bälle in einer liste hat und sie unterscheidet mit einem color attribut.
+	blue, red, goal. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ */
+
+
+
 package aufgabe_4;
 
 import java.util.ArrayList;
@@ -50,9 +80,7 @@ public class logic {
 	}
 	
 	
-	//Momentum ist wichtig für die bälle die angestoßen werden, nach jedem tick soll geprüft wreden 
-	//ob ein ball momentum in eine richtung hat und dann in die richtung moven. Wenn dort ein ball 
-	//ist soll das momentum übertragen werden bis kein ball momentum hat.
+
 	
 	
 	public void tick() {
