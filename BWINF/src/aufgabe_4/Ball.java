@@ -4,6 +4,7 @@ public class Ball {
 
 	private int pos[] = new int[2];
 	private boolean isGoal;
+	private String momentum;
 	
 	
 	
@@ -11,6 +12,7 @@ public class Ball {
 		this.pos[0] = x;
 		this.pos[1] = y;
 		this.isGoal = false;
+		this.momentum = "rest";
 	}
 	
 	public Ball(int x, int y, boolean isGoal) {
@@ -49,7 +51,9 @@ public class Ball {
 		this.pos[1]+= value;
 	}
 	
-	
+	public void setMomentum (String direction) {
+		this.momentum = direction;
+	}
 	
 	
 	

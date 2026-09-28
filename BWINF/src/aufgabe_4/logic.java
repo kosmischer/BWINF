@@ -21,10 +21,21 @@ public class logic {
 			}
 		}
 	
+	public void pushBall(Ball ball) {
+		//Move east
+		if(ball.getPos()[0] == 1) {ball.setMomentum("east");}
+		//move west
+		if(ball.getPos()[0] == 11) {ball.setMomentum("west");}
+		//move south
+		if(ball.getPos()[1] == 1) {ball.setMomentum("south");}
+		//move north
+		if(ball.getPos()[1] == 11) {}ball.setMomentum("north");
+	}
 	
 	
-	
-	
+	//Momentum ist wichtig für die bälle die angestoßen werden, nach jedem tick soll geprüft wreden 
+	//ob ein ball momentum in eine richtung hat und dann in die richtung moven. Wenn dort ein ball 
+	//ist soll das momentum übertragen werden bis kein ball momentum hat.
 	
 	
 	
