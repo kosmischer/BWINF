@@ -5,6 +5,7 @@ public class Ball {
 	private int pos[] = new int[2];
 	private boolean isGoal;
 	private String momentum;
+	private int momentumStrength;
 	
 	
 	
@@ -55,14 +56,34 @@ public class Ball {
 		this.momentum = direction;
 	}
 	
+	public String getMomentum() {
+		return this.momentum;
+	}
 	
 	
 	
+	public void setMomentumStrength(int strength) {
+		this.momentumStrength = strength;
+	}
 	
+	public int getMomentumStrength() {
+		return this.momentumStrength;
+	}
 	
+	public void reduceMomentumStrength() {
+		this.momentumStrength--;
+		if (this.momentumStrength <= 0) {
+			this.momentum = "rest";
+			this.momentumStrength = 0;
+		}
+	}
 	
-	
-	
+	public void checkMomentum() {
+		if (this.momentumStrength == 0) {
+			this.momentum = "rest";
+		}
+	}
+
 }
 
 
