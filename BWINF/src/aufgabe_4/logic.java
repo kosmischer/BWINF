@@ -6,8 +6,6 @@ Notizen:
 	ist soll das momentum übertragen werden bis kein ball momentum hat.
 	
 
-	Es wäre DOCH besser wenn man alle bälle in einer liste hat und sie unterscheidet mit einem color attribut.
-	blue, red, goal. 
 
 
 
@@ -35,19 +33,20 @@ import java.util.List;
 
 public class logic {
 
-	private List<Ball> blueBallList = new ArrayList<>();
-	private List<Ball> redBallList = new ArrayList<>();
+	private List<Ball> ballList = new ArrayList<>();
+
 	private Ball goal;
 	
 	public logic() {
-		goal = new Ball(goalBallPos()[0], goalBallPos()[1], true);
+		goal = new Ball(goalBallPos()[0], goalBallPos()[1], "goal");
+		ballList.add(goal);
 		}
 	
 	public void placeBall(int x, int y, boolean isBlue) {
 		if (isBlue) {
-			blueBallList.add(new Ball(x, y));
+			ballList.add(new Ball(x, y, "blue"));
 			} else {
-			redBallList.add(new Ball(x, y));
+			ballList.add(new Ball(x, y, "red"));
 			}
 		}
 	
@@ -84,13 +83,7 @@ public class logic {
 	
 	
 	public void tick() {
-		List<Ball> ballList = new ArrayList<>();
-		ballList.add(goal);
-		ballList.addAll(blueBallList);
-		ballList.addAll(redBallList);
-		
-		
-		
+	
 		for (Ball ball : ballList) {
 			if (!ball.getMomentum().equals("rest")) {
 				int x = ball.getPos()[0];
@@ -120,7 +113,7 @@ public class logic {
 				for (Ball otherBall : ballList) {
 					if (otherBall.getPos()[0] == newx && otherBall.getPos()[1] == newy) {
 						//there is a ball in the way, transfer momentum
-						otherBall.setMomentum("north");
+						otherBall.setMomentum(ball.getMomentum());
 						otherBall.setMomentumStrength(1);
 						ball.setMomentumStrength(1);
 						}

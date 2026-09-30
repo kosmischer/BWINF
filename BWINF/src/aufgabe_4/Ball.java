@@ -3,24 +3,22 @@ package aufgabe_4;
 public class Ball {
 
 	private int pos[] = new int[2];
-	private boolean isGoal;
+	
 	private String momentum;
 	private int momentumStrength;
+	private String color;
 	
 	
 	
-	public Ball(int x, int y) {
+	public Ball(int x, int y, String color) {
 		this.pos[0] = x;
 		this.pos[1] = y;
-		this.isGoal = false;
+		this.color = color;
 		this.momentum = "rest";
 	}
 	
-	public Ball(int x, int y, boolean isGoal) {
-		this.pos[0] = x;
-		this.pos[1] = y;
-		this.isGoal = isGoal;
-	}
+
+	
 	
 	
 	public int[] getPos() {
