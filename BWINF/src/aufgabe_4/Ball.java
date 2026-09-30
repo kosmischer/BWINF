@@ -17,6 +17,9 @@ public class Ball {
 		this.momentum = "rest";
 	}
 	
+	public String getColor() {
+		return this.color;
+	}
 
 	
 	
@@ -30,9 +33,7 @@ public class Ball {
 		this.pos[1] = y;
 	}
 	
-	public boolean isGoal() {
-		return isGoal;
-	}
+
 	
 	public void moveRight(int value) {
 		this.pos[0]+= value;
