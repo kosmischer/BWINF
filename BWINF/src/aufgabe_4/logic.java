@@ -140,6 +140,10 @@ public class logic {
 		
 		return goalBallPos;
 	}
+	
+	public List<Ball> getBallList() {
+		return ballList;
+	}
 }
 	
 
