@@ -291,6 +291,9 @@ buttons.add(button);
     
     
     private void updateBallPositions() {
+    	//bevor wie die neien positionen der Bälle anzeigen, müssen wir die alten Positionen zurücksetzen, also alle labels auf default zurücksetzen
+    	
+    	
         for (Ball ball : logic.getBallList()) {
 			int x = ball.getPos()[0];
 			int y = ball.getPos()[1];
