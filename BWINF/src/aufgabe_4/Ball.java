@@ -7,6 +7,7 @@ public class Ball {
 	private String momentum;
 	private int momentumStrength;
 	private String color;
+	private boolean thrown;
 	
 	
 	
@@ -15,6 +16,7 @@ public class Ball {
 		this.pos[1] = y;
 		this.color = color;
 		this.momentum = "rest";
+		this.thrown = false;
 	}
 	
 	public String getColor() {
@@ -81,6 +83,14 @@ public class Ball {
 		if (this.momentumStrength == 0) {
 			this.momentum = "rest";
 		}
+	}
+	
+	public boolean getThrown() {
+		return this.thrown;
+	}
+	
+	public void setThrown(boolean thrown) {
+		this.thrown = thrown;
 	}
 
 }
